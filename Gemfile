@@ -44,9 +44,10 @@ group :development, :test do
   gem 'byebug', platform: :mri
 end
 
+  gem 'web-console', '>= 3.3.0', group: :development
 group :development, :production do
   # Access an IRB console on exception pages or by using <%= console %> anywhere in the code.
-  gem 'web-console', '>= 3.3.0'
+
   gem 'pg'
   gem 'spree', '~> 3.2.0'
   gem 'spree_auth_devise', '~> 3.2.0.beta'
