@@ -15,4 +15,7 @@ Spree.config do |config|
   # config.track_inventory_levels = false
 end
 
+Spree::Frontend::Config[:locale] = 'es'
+Spree::Backend::Config[:locale] = 'es'
+
 Spree.user_class = "Spree::User"
