@@ -9,7 +9,8 @@ end
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.0.2'
 # Use postgresql as the database for Active Record
-gem 'pg', '~> 0.18'
+#gem 'pg', '~> 0.18'
+
 gem 'rails_12factor', group: :production
 # Use Puma as the app server
 gem 'puma', '~> 3.0'
@@ -35,10 +36,7 @@ gem 'jbuilder', '~> 2.5'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
-gem 'spree', '~> 3.2.0'
-gem 'spree_auth_devise', '~> 3.2.0.beta'
-gem 'spree_gateway', '~> 3.2.0.beta'
-gem 'spree_i18n', github: 'spree-contrib/spree_i18n'
+
 
 
 group :development, :test do
@@ -46,9 +44,14 @@ group :development, :test do
   gem 'byebug', platform: :mri
 end
 
-group :development do
+group :development, :production do
   # Access an IRB console on exception pages or by using <%= console %> anywhere in the code.
   gem 'web-console', '>= 3.3.0'
+  gem 'pg'
+  gem 'spree', '~> 3.2.0'
+  gem 'spree_auth_devise', '~> 3.2.0.beta'
+  gem 'spree_gateway', '~> 3.2.0.beta'
+  gem 'spree_i18n', github: 'spree-contrib/spree_i18n'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
